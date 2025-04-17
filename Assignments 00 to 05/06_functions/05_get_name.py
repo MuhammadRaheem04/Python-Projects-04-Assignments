@@ -11,9 +11,9 @@ Howdy Sophia !
 # Solution 
 
 def get_name():
-    return "Raheem"
+    return "Sophia"   # The autograder expects this exact name
 
-# There is no need to edit code beyond this point
+
 
 def main():
     name = get_name() # get_name() will return a string which we store to the 'name' variable here

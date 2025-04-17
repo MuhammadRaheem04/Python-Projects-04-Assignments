@@ -33,10 +33,10 @@ while curr_value < 100:
 
 def main():
     try:
-        curr_value = int(input("Enter a numberto see it,s double: "))
+        curr_value = int(input("Enter a number to see it's double: "))
         while curr_value < 100:
             curr_value = curr_value * 2
-            print(curr_value)
+            print(curr_value, end=" ")
     except ValueError:
         print("Invalid input! Please enter a valid number.")
 

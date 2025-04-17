@@ -15,12 +15,15 @@ def print_divisors(num: int):
     for i in range(num):
         curr_divisor = i + 1
         if num % curr_divisor == 0:
-            print(curr_divisor)
+            print(curr_divisor, end=' ')
 
 def main():
-    num = int(input("Enter a number: "))
-    print_divisors(num)
-
+    try:
+        num = int(input("Enter a number: "))
+        print_divisors(num)
+    except ValueError:
+        print("Invalid input. Please enter an integer.")
+    
 
 if __name__ == '__main__':
     main()

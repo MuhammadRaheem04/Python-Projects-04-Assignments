@@ -6,18 +6,20 @@ Fill out the subtract_seven helper function to subtract 7 from num, and fill out
 
 # Solution 
 
-def main():
-    num: int = 7
-    num = subtract_seven(num)
-    print("this should be zero:", num)
-    
-    num2: int = 15
-    num2 = subtract_seven(num2)  # 15 - 7 = 8
-    print("The result after subtracting 7 is:", num2)  
-
 def subtract_seven(num):
     num = num - 7
     return num
+
+def main():
+    while True:
+        try:
+            num: int = int(input("Enter a number: "))
+            break
+        except ValueError:
+            print("Invalid input. Please enter a valid integer.")
+
+    result = subtract_seven(num)
+    print("The result after subtracting 7 is:", result)
 
 if __name__ == '__main__':
     main()

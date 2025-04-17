@@ -32,7 +32,7 @@ def is_adult(age: int):
 
 
 def main():
-    age : str = int(input("How old is this person?: "))
+    age : int = int(input("How old is this person?: "))
     print(is_adult(age))
     
 

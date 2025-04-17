@@ -11,13 +11,22 @@ Enter a number: 2 Double that is 4
 
 # Solution 
 
-def double(num: int):
-    return num * 2
+def double_num(num):
+  return num * 2
+
+def get_input():
+  while True:
+    try:
+      user_input = int(input("Enter a number: "))
+      break
+    except ValueError:
+      print("Invalid input. Please enter an integer.")
+  return user_input
 
 def main():
-    num = int(input("Enter a number: "))
-    num_times_2 = double(num)
-    print(f"Double of {num} is {num_times_2}")
+  user_input = get_input()
+  doubled_num = double_num(user_input)
+  print(f"The doubled number of {user_input} is: {doubled_num}")
 
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+  main()

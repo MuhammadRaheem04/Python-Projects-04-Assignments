@@ -125,7 +125,13 @@ def hangman():
         # Show word progress
         display_word = ""
         for letter in word:
-            display_word += letter + " " if letter in guessed_letters else "_ "
+            display_word += letter + " " if letter in guessed_letters else "_ " # also can be wriiten as 
+
+            # if letter in guessed_letters:
+            #     display_word += letter + " "
+            # else:
+            #     display_word += "_ "
+
         print(display_word.strip())
 
         # Win check

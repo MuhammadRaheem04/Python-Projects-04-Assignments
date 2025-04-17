@@ -12,9 +12,23 @@
 # Solution: 
 
 def main():
-    # Get the numbers we want to divide
-    dividend: int = int(input("Please enter an integer to be divided: "))
-    divisor: int = int(input("Please enter an integer to divide by: "))
+    while True:
+        try:
+            # Get the dividend from user input
+            dividend: int = int(input("Please enter an integer to be divided: "))
+            break
+        except ValueError:
+            print("Invalid input. Please enter a valid integer.")
+    while True:
+        try:
+            # Get the divisor from user input
+            divisor: int = int(input("Please enter an integer to divide by: "))
+            if divisor == 0:
+                print("Cannot divide by zero. Please enter a non-zero integer.")
+                continue
+            break
+        except ValueError:
+            print("Invalid input. Please enter a valid integer.")
 
     quotient: int = dividend // divisor  # Divide with no remainder/decimals (integer division)
     remainder: int = dividend % divisor  # Get the remainder of the division (modulo)

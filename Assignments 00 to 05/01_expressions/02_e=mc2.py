@@ -22,7 +22,17 @@
 C : int = 299792458  # The speed of light in m/s
 
 def main():
-    mass_in_kg: float = float(input("Enter kilos of mass: "))
+    while True:
+        try:
+            # Get mass from user input
+            mass_in_kg: float = float(input("Enter kilos of mass: "))
+            if mass_in_kg < 0:
+                print("Mass cannot be negative. Please enter a positive value.")
+                continue
+        except ValueError:
+            print("Invalid input. Please enter a numeric value.")
+            continue
+        break
 
     # Calculate energy
     # equivalently energy = mass * (C ** 2)
@@ -35,7 +45,7 @@ def main():
     print("m = " + str(mass_in_kg) + " kg")
     print("C = " + str(C) + " m/s")
     
-    print(f"e = {str(energy_in_joules)} joules!")
+    print(f"e = {energy_in_joules} joules!")
 
 
 if __name__ == '__main__':

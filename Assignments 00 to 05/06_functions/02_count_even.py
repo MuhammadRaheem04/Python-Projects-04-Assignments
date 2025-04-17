@@ -24,10 +24,17 @@ def get_list_of_ints():
     Reads in integers until the user presses enter and returns the resulting list.
     """
     lst = []  # Make an empty list to store integers
-    user_input = input("Enter an integer or press enter to stop: ")  # Get user input for an integer
-    while user_input != "":  # While the user doesn't enter nothing...
-        lst.append(int(user_input))  # Cast the user input into an integer and add it to our list
-        user_input = input("Enter an integer or press enter to stop: ")  # Get the next user input
+
+    while True:
+        user_input = input("Enter an integer or press enter to stop: ")  # Get user input for an integer
+        
+        if user_input == '':
+            break  # If the user pressed enter, break out of the loop
+        try:
+            number = int(user_input)  # Try to cast the user input into an integer
+            lst.append(number)  # Append the integer to the list
+        except ValueError:  # If the user input is not an integer, print an error message and continue to the next iteration
+            print("Please enter a valid integer.")
 
     return lst
 

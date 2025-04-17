@@ -16,7 +16,6 @@ def login(email, stored_logins, password_to_check):
     """
     return stored_logins.get(email) == hash_password(password_to_check)
 
-# There is no need to edit code beyond this point
 
 def hash_password(password):
     """

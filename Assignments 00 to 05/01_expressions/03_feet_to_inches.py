@@ -4,12 +4,15 @@
 # Solution:
 
 
-INCHES_IN_FOOT: int = 12  # There are 12 inches for 1 foot.
-
 def main():
-    feet: float = float(input("Enter number of feet: "))  # Get the number of feet, make sure to cast it to a float!
-    inches: float = feet * INCHES_IN_FOOT  # Perform the conversion
-    print(f"{feet} feet is equal to {inches} inches!")
-    
+  inches_per_foot = 12
+  while True:
+    try:
+      feet = float(input("Enter the length in feet: "))
+      inches = feet * inches_per_foot
+      print(f"{feet} feet is equal to {inches} inches.")
+      break 
+    except ValueError: 
+      print("Invalid input. Please enter a number.")
 if __name__ == '__main__':
-    main()
+  main()

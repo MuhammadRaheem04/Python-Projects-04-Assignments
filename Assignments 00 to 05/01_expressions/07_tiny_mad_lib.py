@@ -17,9 +17,39 @@ SENTENCE_START: str = "Panaversity is fun. I learned to program and used Python 
 
 def main():
     # Get the three inputs from the user to make the adlib
-    adjective: str = input("Please type an adjective and press enter. ")
-    noun: str = input("Please type a noun and press enter. ")
-    verb: str = input("Please type a verb and press enter. ")
+    while True:
+        try:
+            # Get the adjective from user input
+            adjective: str = input("Please type an adjective and press enter. ")
+            if not adjective.replace(" ", "").isalpha():
+                print("Please enter a valid adjective (Letters only).")
+                continue
+        except ValueError:
+            print("Invalid input. Please enter a valid adjective.")
+            continue
+        break
+    while True:
+        try:
+            # Get the noun from user input
+            noun: str = input("Please type a noun and press enter. ")
+            if not noun.replace(" ", "").isalpha():
+                print("Please enter a valid noun (Letters only).")
+                continue
+        except ValueError:
+            print("Invalid input. Please enter a valid noun.")
+            continue
+        break
+    while True:
+        try:
+            # Get the verb from user input
+            verb: str = input("Please type a verb and press enter. ")
+            if not verb.replace(" ", "").isalpha():
+                print("Please enter a valid verb (Letters only).")
+                continue
+        except ValueError:
+            print("Invalid input. Please enter a valid verb.")
+            continue
+        break
 
     # Join the inputs together with the sentence starter
     print(SENTENCE_START + adjective + " " + noun + " " + verb + "!")

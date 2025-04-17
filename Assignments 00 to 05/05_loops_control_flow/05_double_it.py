@@ -10,7 +10,7 @@
 def main():
     curr_value = int(input("Enter a number: "))  # Ask user for a number
     
-    while curr_value < 100:  # Continue doubling while value is less than 100
+    while curr_value <= 100:  # Continue doubling while value is less than or equal to 100
         curr_value *= 2  # Double the current value
         print(curr_value, end=" ")  # Print on the same line with space
 

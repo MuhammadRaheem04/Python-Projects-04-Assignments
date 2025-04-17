@@ -1,5 +1,3 @@
-from math import e
-from turtle import up
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt

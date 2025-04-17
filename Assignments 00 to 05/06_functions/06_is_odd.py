@@ -7,11 +7,11 @@ Problem Statement
 # Solution 
 
 def main():
-    for i in range(10):
+    for i in range(10, 20):
         if is_odd(i):
-            print('odd')
+            print(f'{i} odd ', end=' ')
         else:
-            print('even')
+            print(f'{i} even ', end=' ')
             
 def is_odd(value: int):
     """
@@ -22,4 +22,20 @@ def is_odd(value: int):
     return remainder == 1
 
 if __name__ == '__main__':
+    main()
+
+
+# Solution 02 
+
+def even_or_odd():
+    for num in range(10, 20):  # from 10 to 19 inclusive
+        if num % 2 == 0:
+            print(f"{num} even", end=" ")
+        else:
+            print(f"{num} odd", end=" ")
+
+def main():
+    even_or_odd()
+
+if __name__ == "__main__":
     main()

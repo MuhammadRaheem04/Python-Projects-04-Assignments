@@ -11,7 +11,7 @@ Please type a message: Hello! Enter a number of times to repeat your message: 6 
 # Solution 
 
 def print_multiple(message: str, repeats: int):
-    for i in range(repeats): print(message)
+    for _ in range(repeats): print(message, end=' ')
 
 def main():
     message = input("Please type a message: ")

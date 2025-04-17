@@ -17,7 +17,14 @@
 MINIMUM_HEIGHT : int = 5 # feet 
 
 def main():
-    height = float(input("How tall are you? "))
+    while True:
+        try:
+            # Get the height from the user
+            height = float(input("How tall are you? (feet: ) "))
+            break  # Exit the loop if the input is valid
+        except ValueError:
+            print("Invalid input. Please enter a valid height in feet.")
+    
     if height >= MINIMUM_HEIGHT:
         print("You're tall enough to ride!")
     else:

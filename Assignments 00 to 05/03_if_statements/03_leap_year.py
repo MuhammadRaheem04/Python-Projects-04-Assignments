@@ -12,8 +12,13 @@
 # solution 
 
 def main():
-    # Get the year to check from the user
-    year = int(input('Please input a year: '))
+    while True:
+        try:
+            # Get the year to check from the user
+            year = int(input('Please input a year: '))
+            break  # Exit the loop if the input is valid
+        except ValueError:
+            print("Invalid input. Please enter a valid year.")
 
     if year % 4 == 0:  # Checking whether the provided year is evenly divisibly by 4
         if year % 100 == 0:  # Checking whether the provided year is evenly divisibly by 100

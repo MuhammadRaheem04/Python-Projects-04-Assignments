@@ -11,8 +11,7 @@ def shorten(lst):
     while len(lst) > MAX_LENGTH:
         last_elem = lst.pop()
         print(last_elem)
-
-# There is no need to edit code beyond this point
+    print("List is now:", lst)
 
 def get_lst():
     

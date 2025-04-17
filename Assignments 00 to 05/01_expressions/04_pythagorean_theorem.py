@@ -20,19 +20,25 @@
 
 # Solution: 
 
-import math  # Import the math library so we can use the sqrt function
+import math
 
 def main():
-    # Get the two side lengths from the user and cast them to be numbers
-    ab: float = float(input("Enter the length of AB: "))
-    ac: float = float(input("Enter the length of AC: "))
+  while True:
+    try:
+      Side_AB: float = float(input("Enter the length of side AB: "))
+      break
+    except ValueError:
+      print("Invalid input. Please enter a number.")
+  while True:
+    try:
+      Side_AC: float = float(input("Enter the length of side AC: "))
+      break
+    except ValueError:
+      print("Invalid input. Please enter a number.")
+ 
+  Side_BC: float = (Side_AB ** 2 + Side_AC ** 2)
+  result = math.sqrt(Side_BC)
+  print(f"The length of side BC is: {result}")
 
-    # Calculate the hypotenuse using the two sides and print it out
-    bc: float = math.sqrt(ab**2 + ac**2)
-    print("The length of BC (the hypotenuse) is: " + str(bc))
-
-
-# There is no need to edit code beyond this point
-
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+  main()

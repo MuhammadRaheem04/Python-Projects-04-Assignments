@@ -8,8 +8,8 @@ def read_phone_numbers():
     phonebook = {}                   # Create empty phonebook
 
     while True:
-        name = input("Enter the Contact Name: ")
-        if name == "":
+        name = input("Enter the Contact Name or done to finish: ")
+        if name.lower() == "done":
             break
         number = input("Enter the Contact Number: ")
         phonebook[name] = number

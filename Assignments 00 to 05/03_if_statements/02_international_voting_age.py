@@ -14,32 +14,32 @@
 
 # Solution 
 
-PETURKSBOUIPO_AGE : int = 16
-STANLAU_AGE : int = 25
-MAYENGUA_AGE : int = 48
+voting_age_in_Peturksbouipo = 16
+voting_age_in_Stanlau = 25
+voting_age_in_Mayengua = 48
 
 def main():
-    # Get the user's age
-    user_age = int(input("How old are you? "))
+  while True:
+    try:
+      user_age = int(input("Enter your age: "))
+      break
+    except ValueError:
+      print("Invalid input. Please enter a number.")
 
-    # Check if the user can vote in Peturksbouipo
-    if user_age >= PETURKSBOUIPO_AGE:
-        print(f"You can vote in Peturksbouipo where the voting age is {PETURKSBOUIPO_AGE}.")
-    else:
-        print(f"You cannot vote in Peturksbouipo where the voting age is {PETURKSBOUIPO_AGE}.")
-    
-    # Check if the user can vote in Stanlau
-    if user_age >= STANLAU_AGE:
-        print(f"You can vote in Stanlau where the voting age is {STANLAU_AGE}.")
-    else:
-        print(f"You cannot vote in Stanlau where the voting age is {STANLAU_AGE}.")
-    
-    # Check if user can vote in Mayengua
-    if user_age >= MAYENGUA_AGE:
-        print(f"You can vote in Mayengua where the voting age is {MAYENGUA_AGE}.")
-    else:
-        print(f"You cannot vote in Mayengua where the voting age is {MAYENGUA_AGE}.")
+  if user_age >= voting_age_in_Peturksbouipo:
+    print(f"You can vote in Peturksbouipo, where the voting age is {voting_age_in_Peturksbouipo}.")
+  else:
+    print(f"You cannot vote in Peturksbouipo, where the voting age is {voting_age_in_Peturksbouipo}.")
 
+  if user_age >= voting_age_in_Stanlau:
+    print(f"You can vote in Stanlau, where the voting age is {voting_age_in_Stanlau}.")
+  else:
+    print(f"You cannot vote in Stanlau, where the voting age is {voting_age_in_Stanlau}.")
 
-if __name__ == '__main__':
-    main()
+  if user_age >= voting_age_in_Mayengua:
+    print(f"You can vote in Mayengua, where the voting age is {voting_age_in_Mayengua}.")
+  else:
+    print(f"You cannot vote in Mayengua, where the voting age is {voting_age_in_Mayengua}.")
+
+if __name__ == "__main__":
+  main()
